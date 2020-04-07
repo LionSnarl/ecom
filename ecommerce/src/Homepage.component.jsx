@@ -1,4 +1,4 @@
-import react from 'react'
+import React from 'react'
 
 const HomePage = () => (
   <div className="homepage">
@@ -6,6 +6,7 @@ const HomePage = () => (
       <div className="menu-item>">
         <div className="content">
           <h1 className="title">
+            Tees
             <span className="subtitle"></span>
           </h1>
         </div>
@@ -13,6 +14,7 @@ const HomePage = () => (
       <div className="menu-item>">
         <div className="content">
           <h1 className="title">
+            Pants
             <span className="subtitle"></span>
           </h1>
         </div>
@@ -20,6 +22,7 @@ const HomePage = () => (
       <div className="menu-item>">
         <div className="content">
           <h1 className="title">
+            Hoodies
             <span className="subtitle"></span>
           </h1>
         </div>
@@ -27,6 +30,7 @@ const HomePage = () => (
       <div className="menu-item>">
         <div className="content">
           <h1 className="title">
+            Beanies
             <span className="subtitle"></span>
           </h1>
         </div>
@@ -34,3 +38,5 @@ const HomePage = () => (
     </div>
   </div>
 )
+
+export default HomePage
