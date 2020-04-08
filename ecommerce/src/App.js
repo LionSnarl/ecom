@@ -1,12 +1,10 @@
 import React from 'react'
-import './App.css'
-import Homepage from './Homepage.component'
+import HomePage from './HomePage.component'
 
 function App() {
   return (
     <div>
-      Hello World
-      <Homepage />
+      <HomePage />
     </div>
   )
 }
