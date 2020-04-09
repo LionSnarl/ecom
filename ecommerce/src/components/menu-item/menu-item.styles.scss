@@ -9,6 +9,7 @@
   margin: 0 7.5px 15px;
   position: center;
   background-size: cover;
+  background-position: center;
 
   &.large {
     height: 380px;
@@ -29,6 +30,8 @@
     align-items: center;
     justify-content: center;
     border: 1px solid black;
+    opacity: 0.8;
+    background-color: white;
 
     .title {
       font-weight: bold;
