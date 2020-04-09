@@ -7,7 +7,19 @@
   justify-content: center;
   border: 1px solid black;
   margin: 0 7.5px 15px;
-  position: center;
+
+  &:hover {
+    cursor: pointer;
+
+    & .background-image {
+      transform: scale(1.05);
+      transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+    }
+
+    & .content {
+      opacity: 0.9;
+    }
+  }
 
   &.large {
     height: 380px;
@@ -40,7 +52,7 @@
 
     .title {
       font-weight: bold;
-      margin-bottom: 6px;
+      margin-bottom: 0px;
       font-size: 22px;
       color: #4a4a4a;
     }
@@ -48,6 +60,7 @@
     .subtitle {
       font-weight: lighter;
       font-size: 16px;
+      margin-bottom: 20px;
     }
   }
 }
