@@ -1,6 +1,6 @@
 import React from 'react'
 
-class SignIn extends Component {
+class SignIn extends React.Component {
   constructor() {
     super()
     this.state = {
@@ -8,18 +8,42 @@ class SignIn extends Component {
       password: '',
     }
   }
+
+  handleSubmit = (event) => {
+    event.preventDefault()
+    this.setState({ email: '', password: '' })
+  }
+
+  handleChange = (event) => {
+    const { value, name } = event.target
+    this.setState({ [name]: value })
+  }
   render() {
-    return
-    ;<div className="sign-in">
-      <h2>I already have an account</h2>
-      <span>Sign in with your email and password</span>
-      <form>
-        <input name="email" value={this.state.email} required />
-        <label>email</label>
-        <input name="password" value={this.state.password} required />
-        <label>password</label>
-      </form>
-    </div>
+    return (
+      <div className="sign-in">
+        <h2>I already have an account</h2>
+        <span>Sign in with your email and password</span>
+        <form>
+          <input
+            name="email"
+            type="email"
+            value={this.state.email}
+            //   onChange={this.handleChange}
+            required
+          />
+          <label>email</label>
+          <input
+            name="password"
+            type="password"
+            value={this.state.password}
+            onChange={this.handleChange}
+            required
+          />
+          <label>password</label>
+          <input type="submit" value="Submit Form" />
+        </form>
+      </div>
+    )
   }
 }
 
