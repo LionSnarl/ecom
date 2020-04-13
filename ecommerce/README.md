@@ -35,6 +35,8 @@ inside of firebase.utils.js copy and paste the following:
 
 inside of your firebase account you will have to edit your authentication for google sign in and enable it.
 
+##
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
