@@ -43,7 +43,7 @@ class SignUp extends React.Component {
     }
   }
 
-  handleSubmit(event) {
+  handleChange = (event) => {
     const { name, value } = event.target
     this.setState({ [name]: value })
   }
@@ -57,15 +57,15 @@ class SignUp extends React.Component {
         <form className="sign-up-form" onSubmit={this.handleSubmit}>
           <FormInput
             type="text"
-            display="displayName"
+            name="displayName"
             value={displayName}
             onChange={this.handleChange}
-            label="display Name"
+            label="Display Name"
             required
           />
           <FormInput
             type="email"
-            display="email"
+            name="email"
             value={email}
             onChange={this.handleChange}
             label="email"
@@ -73,7 +73,7 @@ class SignUp extends React.Component {
           />
           <FormInput
             type="password"
-            display="password"
+            name="password"
             value={password}
             onChange={this.handleChange}
             label="Password"
@@ -81,7 +81,7 @@ class SignUp extends React.Component {
           />
           <FormInput
             type="password"
-            display="confirmPassword"
+            name="confirmPassword"
             value={confirmPassword}
             onChange={this.handleChange}
             label="Confirm Password"
