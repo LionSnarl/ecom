@@ -1,39 +1,16 @@
-To make this application work, you will need to create your own Firebase account and create a firebase folder inside of src.
-cd into src
-$ mkdir firebase
-$ touch firebase.utils.js
+To make this application work, you will need to create your own Firebase account and create .env file in your root directory. In your firebase account you will have to edit your authentication for google sign in and enable it.
 
-inside of firebase.utils.js copy and paste the following:
+in your .env file add the following but with your own identification keys. This is an example. these keys will not work.
 
-    import firebase from 'firebase/app'
-    import 'firebase/firestore'
-    import 'firebase/auth'
-
-    const config = {
-        //here you will add your own firebase authentication object. It should look something like this.
-        //these are fake credentials.
-    apiKey: 'AHJK31278hui378dhk7disa7t78d8123IGSTGYU',
-    authDomain: 'ecommerce-3219648.firebaseapp.com',
-    databaseURL: 'https://ecommerce-3219648.firebaseio.com',
-    projectId: 'ecommerce-3219648',
-    storageBucket: 'ecommerce-3219648.appspot.com',
-    messagingSenderId: '527275803428',
-    appId: '1:527275803428:web:4274b1976d8f391124bg7s',
-    measurementId: 'G-DSGHJK6GH33H',
-    }
-
-    firebase.initializeApp(config)
-
-    export const auth = firebase.auth()
-    export const firestore = firebase.firestore()
-
-    const provider = new firebase.auth.GoogleAuthProvider()
-    provider.setCustomParameters({ prompt: 'select_account' })
-    export const signInWithGoogle = () => auth.signInWithPopup(provider)
-
-    export default firebase
-
-inside of your firebase account you will have to edit your authentication for google sign in and enable it.
+REACT_APP_BASE_URL=localhost
+REACT_APP_API_KEY=JHGA7883SyAjhjdsaQCa5JjdksalhKP1BIyYsdhsjak98vLkE
+REACT_APP_AUTH_DOMAIN=ecommerce-23h7.firebaseapp.com
+REACT_APP_DATABASE_URL=https://ecommerce-23h7.firebaseio.com
+REACT_APP_PROJECT_ID=ecommerce-23h7
+REACT_APP_STORAGE_BUCKET=ecommerce-23h7.appspot.com
+REACT_APP_MESSAGING_SENDER_ID=6473982164739512
+REACT_APP_APP_ID=1:6473982164739512:web:6473289647926472489
+REACT_APP_MEASUREMENT_ID=G-SAGHJKDGHJS
 
 ##
 
