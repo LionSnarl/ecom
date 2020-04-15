@@ -10,7 +10,12 @@ import './sign-up.styles.scss'
 class SignUp extends React.Component {
   constructor() {
     super()
-    this.state = {}
+    this.state = {
+      displayName: '',
+      email: '',
+      password: '',
+      confirmPassword: '',
+    }
   }
 
   handleSubmit = async (event) => {
@@ -39,7 +44,8 @@ class SignUp extends React.Component {
   }
 
   handleSubmit(event) {
-    //   const {name, value}
+    const { name, value } = event.target
+    this.setState({ [name]: value })
   }
 
   render() {
@@ -87,3 +93,5 @@ class SignUp extends React.Component {
     )
   }
 }
+
+export default SignUp
