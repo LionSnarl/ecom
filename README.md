@@ -2,7 +2,7 @@
 
 ecommerce application made with React, hooks, Redux, Firebase, GraphQL
 
-####
+##
 
 To make this application work, you will need to create your own Firebase account and create .env file in your root directory. In your firebase account you will have to edit your authentication for google sign in and enable it.
 
