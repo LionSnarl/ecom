@@ -8,7 +8,7 @@ import './header.styles.scss'
 
 import { auth } from '../../firebase/firebase.utils'
 
-const Header = ({ currentUser }) => (
+const Header = ({ currentUser, hidden }) => (
   <div className="header">
     <Link className="logo-container" to="/">
       <Logo className="logo" />
@@ -34,12 +34,13 @@ const Header = ({ currentUser }) => (
       )}
       <CartIcon />
     </div>
-    <CartDropdown />
+    {hidden ? null : <CartDropdown />}
   </div>
 )
-
-const mapStateToProps = (state) => ({
-  currentUser: state.user.currentUser,
+//state.user.currentUser === {user: {curentuser}}
+const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
+  currentUser,
+  hidden,
 })
 
 export default connect(mapStateToProps)(Header)
